@@ -16,12 +16,13 @@ import com.example.connekma_driver.R;
 
 import java.util.ArrayList;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     ArrayList<MainModel> mainModels;
     Context context;
     Select select;
-    int a=-1;
+    int a = -1;
+    int c = 0;
 
     public static interface Select {
         void Choose(int position);
@@ -36,7 +37,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.car_list_items,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.car_list_items, parent, false);
         return new ViewHolder(view);
     }
 
@@ -46,24 +47,31 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
         holder.mCarImage.setImageResource(mainModels.get(position).getLangLogo());
         holder.mCarName.setText(mainModels.get(position).getLangName());
 
+        if (position == a) {
+            if (c == 0) {
+                holder.mRelative.setVisibility(View.VISIBLE);
+                holder.mRelative1.setVisibility(View.VISIBLE);
+
+                c = 1;
+            } else if (c == 1) {
+                holder.mRelative.setVisibility(View.GONE);
+                holder.mRelative1.setVisibility(View.GONE);
+                c = 0;
+            }
+
+        } else {
+            holder.mRelative.setVisibility(View.GONE);
+            holder.mRelative1.setVisibility(View.GONE);
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              a=position;
+                a = position;
                 select.Choose(position);
                 notifyDataSetChanged();
             }
         });
-
-        if(a==position){
-           holder.mRelative.setVisibility(View.VISIBLE);
-           holder.mRelative1.setVisibility(View.VISIBLE);
-        }
-        else {
-            holder.mRelative.setVisibility(View.GONE);
-            holder.mRelative1.setVisibility(View.GONE);
-
-        }
     }
 
     @Override
@@ -74,8 +82,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView mCarImage;
-        TextView mCarName,tv1;
-        RelativeLayout mRelative,mRelative1;
+        TextView mCarName, tv1;
+        RelativeLayout mRelative, mRelative1;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -8,6 +8,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
         android:layout_marginBottom="@dimen/card_margin_dp_2"
         app:cardUseCompatPadding="true"
         >
@@ -38,7 +39,8 @@
                 android:id="@+id/user_rating"
                 style="?android:attr/ratingBarStyleIndicator"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:theme="@style/RatingBar"/>
 
             <TextView
                 android:id="@+id/Date"

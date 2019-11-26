@@ -64,7 +64,6 @@ public class SelectVehicleTypeActivity extends AppCompatActivity implements View
             @Override
             public void Choose(int position) {
 
-                Toast.makeText(SelectVehicleTypeActivity.this, "okk", Toast.LENGTH_SHORT).show();
 
             }
         });

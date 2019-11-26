@@ -65,7 +65,7 @@ public class UploadsDocumentsActivity extends AppCompatActivity implements View.
         uploadDocumentsParentAdapter = new UploadDocumentsParentAdapter(uploadDocumentsModels, UploadsDocumentsActivity.this, new UploadDocumentsParentAdapter.Select() {
             @Override
             public void Choose(int position) {
-                Toast.makeText(UploadsDocumentsActivity.this, "ok", Toast.LENGTH_SHORT).show();
+
 
             }
         });

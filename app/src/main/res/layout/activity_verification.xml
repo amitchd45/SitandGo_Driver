@@ -45,7 +45,6 @@
                     android:elevation="10dp"
                     app:cardBackgroundColor="@color/card_bg_color"
                     app:cardCornerRadius="@dimen/cardCornerRadius"
-                    app:cardElevation="@dimen/cardElevation"
                     app:cardPreventCornerOverlap="false"
                     app:cardUseCompatPadding="true">
 

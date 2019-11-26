@@ -1,7 +1,6 @@
 package com.example.Adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,13 +12,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.Activities.AddLicenseDetailActivity;
-import com.example.Activities.UploadsDocumentsActivity;
 import com.example.Models.DocumentsTypeModel;
 import com.example.Models.UploadDocumentsModel;
-import com.example.Utils.VehicleInformation;
 import com.example.Utils.VehicleInformationChild;
+import com.example.Utils.VehicleInsurance;
+import com.example.Utils.VehiclePermit;
+import com.example.Utils.VehicleRegistration;
 import com.example.connekma_driver.R;
 
 import java.util.ArrayList;
@@ -33,6 +31,7 @@ public class UploadDocumentsParentAdapter extends RecyclerView.Adapter<UploadDoc
     Context context;
     UploadDocumentsParentAdapter.Select select;
     int a = -1;
+    int c = 0;
 
     public static interface Select {
         void Choose(int position);
@@ -64,6 +63,51 @@ public class UploadDocumentsParentAdapter extends RecyclerView.Adapter<UploadDoc
         ArrayList<DocumentsTypeModel> documentsTypeModels = new ArrayList<>();
         holder.mDown.setVisibility(View.VISIBLE);
 
+        if (position == a) {
+            if(c==0){
+                holder.mDown.setVisibility(View.GONE);
+                holder.mUp.setVisibility(View.VISIBLE);
+                holder.recyclerView.setVisibility(View.VISIBLE);
+
+                if (uploadDocumentsModels.get(position).getParentName().equals("Step 1:Driver License")) {
+
+                    for (int i = 0; i < VehicleInformationChild.ChildName.length; i++) {
+                        DocumentsTypeModel model = new DocumentsTypeModel(VehicleInformationChild.ChildName[i]);
+                        documentsTypeModels.add(model);
+                    }
+                } else if (uploadDocumentsModels.get(position).getParentName().equals("Step 2:Vehicle Insurance")) {
+
+                    for (int i = 0; i < VehicleInsurance.ChildName.length; i++) {
+                        DocumentsTypeModel model = new DocumentsTypeModel(VehicleInsurance.ChildName[i]);
+                        documentsTypeModels.add(model);
+                    }
+                } else if (uploadDocumentsModels.get(position).getParentName().equals("Step 3:Vehicle Permit")) {
+
+                    for (int i = 0; i < VehiclePermit.ChildName.length; i++) {
+                        DocumentsTypeModel model = new DocumentsTypeModel(VehiclePermit.ChildName[i]);
+                        documentsTypeModels.add(model);
+                    }
+                } else if (uploadDocumentsModels.get(position).getParentName().equals("Step 4:Vehicle Registration")) {
+
+                    for (int i = 0; i < VehicleRegistration.ChildName.length; i++) {
+                        DocumentsTypeModel model = new DocumentsTypeModel(VehicleRegistration.ChildName[i]);
+                        documentsTypeModels.add(model);
+                    }
+                }
+                c=1;
+            }
+            else if(c==1){
+                holder.mUp.setVisibility(View.GONE);
+                holder.recyclerView.setVisibility(View.GONE);
+                c=0;
+            }
+
+
+        } else {
+            holder.mUp.setVisibility(View.GONE);
+            holder.recyclerView.setVisibility(View.GONE);
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,23 +122,6 @@ public class UploadDocumentsParentAdapter extends RecyclerView.Adapter<UploadDoc
 
 
 
-        if (position == a) {
-            holder.mDown.setVisibility(View.GONE);
-            holder.mUp.setVisibility(View.VISIBLE);
-            holder.recyclerView.setVisibility(View.VISIBLE);
-
-            if (uploadDocumentsModels.get(position).getParentName().equals("Step 1:Driver License")){
-
-                for (int i = 0; i < VehicleInformationChild.ChildName.length; i++) {
-                    DocumentsTypeModel model = new DocumentsTypeModel(VehicleInformationChild.ChildName[i]);
-                    documentsTypeModels.add(model);
-                }
-            }
-
-        } else {
-            holder.mUp.setVisibility(View.GONE);
-            holder.recyclerView.setVisibility(View.GONE);
-        }
 
 //
 //
@@ -105,10 +132,10 @@ public class UploadDocumentsParentAdapter extends RecyclerView.Adapter<UploadDoc
 //        }
 
 
-
         uploadDocumentsChildAdapter = new UploadDocumentsChildAdapter(documentsTypeModels, context, new UploadDocumentsChildAdapter.Select() {
             @Override
             public void Choose(int position) {
+
                 Toast.makeText(context, "position=" + position, Toast.LENGTH_SHORT).show();
             }
         });
@@ -129,7 +156,7 @@ public class UploadDocumentsParentAdapter extends RecyclerView.Adapter<UploadDoc
 
         RecyclerView recyclerView;
         TextView mTextTitleParent;
-        ImageView mDown,mUp;
+        ImageView mDown, mUp;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

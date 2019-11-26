@@ -11,8 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.Models.DocumentsTypeModel;
-import com.example.Models.DocumentsTypeModel_1;
-import com.example.Models.UploadDocumentsModel;
 import com.example.connekma_driver.R;
 
 import java.util.ArrayList;
