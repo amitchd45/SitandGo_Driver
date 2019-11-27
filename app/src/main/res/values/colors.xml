@@ -17,9 +17,10 @@
     <color name="lightGray">#BDBDC2</color>
     <color name="lightGray1">#8ACACACC</color>
     <color name="grayLight">#8AE2E2E4</color>
-    <color name="red">#F44336</color>
+    <color name="red">#E91F11</color>
     <color name="line_color">#8ACACACC</color>
     <color name="bg_btn_location">#3F51B5</color>
     <color name="duskYellow">#FFEB3B</color>
+    <color name="green">#089D69</color>
     <color name="lightGrey">#d3d3d3</color>
 </resources>

@@ -4,27 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.InviteFriendsActivity">
+    tools:context="com.omninos.Activities.InviteFriendsActivity">
 
     <include
         android:id="@+id/header1"
         layout="@layout/top_toolbar" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/header1"
-        android:layout_marginTop="20dp">
-
-        <include layout="@layout/app_logo" />
-
-    </RelativeLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/relativeLayout1">
+        android:layout_below="@id/header1">
 
         <RelativeLayout
             android:id="@+id/relativeLayout3"

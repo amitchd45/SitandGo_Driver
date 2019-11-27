@@ -34,9 +34,10 @@
 
 
                 <RelativeLayout
+                    android:padding="@dimen/dp_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/normal_background">
+                    android:background="@drawable/ractangle_shape">
 
                     <LinearLayout
                         android:layout_marginLeft="10dp"

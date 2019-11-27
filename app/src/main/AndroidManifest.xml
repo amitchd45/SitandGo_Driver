@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.connekma_driver">
+    package="com.omninos.connekma_driver">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,27 +15,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.Activities.RiderFeedbackActivity"></activity>
-        <activity android:name="com.example.Activities.MyWalletActivity" />
+        <activity android:name="com.omninos.Activities.YourTripsActivity"></activity>
+        <activity android:name="com.omninos.Activities.ProfileActivity" />
+        <activity android:name="com.omninos.Activities.RiderFeedbackActivity" />
+        <activity android:name="com.omninos.Activities.MyWalletActivity" />
         <activity
-            android:name="com.example.Activities.HelpActivity"
+            android:name="com.omninos.Activities.HelpActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.example.Activities.ContactActivity" />
-        <activity android:name="com.example.Activities.SettingsActivity" />
-        <activity android:name="com.example.Activities.InviteFriendsActivity" />
-        <activity android:name="com.example.Activities.MyBookingsActivity" />
-        <activity android:name="com.example.Activities.TripsActivity" />
-        <activity android:name="com.example.Activities.MyProfileActivity" /> <!-- <activity android:name="com.example.Activities.HomeActivity"></activity> -->
-        <activity android:name="com.example.Activities.UploadsDocumentsActivity" />
-        <activity android:name="com.example.Activities.AddLicenseDetailActivity" />
-        <activity android:name="com.example.Activities.HomeActivity" />
-        <activity android:name="com.example.Activities.AddVehicleDetailActivity" />
-        <activity android:name="com.example.Activities.UploadVehiclePhotoActivity" />
-        <activity android:name="com.example.Activities.SelectVehicleTypeActivity" />
-        <activity android:name="com.example.Activities.CongratulationsActivity" />
-        <activity android:name="com.example.Activities.VerificationActivity" />
-        <activity android:name="com.example.Activities.RegisterActivity" />
-        <activity android:name="com.example.Activities.LoginActivity" />
+        <activity android:name="com.omninos.Activities.ContactActivity" />
+        <activity android:name="com.omninos.Activities.SettingsActivity" />
+        <activity android:name="com.omninos.Activities.InviteFriendsActivity" />
+        <activity android:name="com.omninos.Activities.MyBookingsActivity" />
+        <activity android:name="com.omninos.Activities.TripsActivity" />
+        <activity android:name="com.omninos.Activities.EditProfileActivity" /> <!-- <activity android:name="com.example.Activities.HomeActivity"></activity> -->
+        <activity android:name="com.omninos.Activities.UploadsDocumentsActivity" />
+        <activity android:name="com.omninos.Activities.AddLicenseDetailActivity" />
+        <activity android:name="com.omninos.Activities.HomeActivity" />
+        <activity android:name="com.omninos.Activities.AddVehicleDetailActivity" />
+        <activity android:name="com.omninos.Activities.UploadVehiclePhotoActivity" />
+        <activity android:name="com.omninos.Activities.SelectVehicleTypeActivity" />
+        <activity android:name="com.omninos.Activities.CongratulationsActivity" />
+        <activity android:name="com.omninos.Activities.VerificationActivity" />
+        <activity android:name="com.omninos.Activities.RegisterActivity" />
+        <activity android:name="com.omninos.Activities.LoginActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

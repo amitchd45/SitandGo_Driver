@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.SettingsActivity">
+    tools:context="com.omninos.Activities.SettingsActivity">
 
     <include
         android:id="@+id/setting_header"
@@ -54,10 +54,12 @@
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
+                        android:theme="@style/SwitchCompact"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:layout_gravity="right" />
+                        android:layout_gravity="right"
+                        android:checked="true"/>
 
                 </RelativeLayout>
 

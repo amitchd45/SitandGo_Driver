@@ -115,6 +115,7 @@
                         android:layout_marginRight="@dimen/dp_10">
 
                         <androidx.appcompat.widget.SwitchCompat
+                            android:theme="@style/SwitchCompact"
                             android:id="@+id/sc_switch"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

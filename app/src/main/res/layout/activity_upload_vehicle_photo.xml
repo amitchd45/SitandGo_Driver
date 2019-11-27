@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.UploadVehiclePhotoActivity">
+    tools:context="com.omninos.Activities.UploadVehiclePhotoActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -16,21 +16,15 @@
         android:layout_height="match_parent">
 
     <RelativeLayout
+        android:layout_marginTop="@dimen/dp_30"
         android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/logo"
-        layout="@layout/app_logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_30" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/logo">
+        android:layout_height="match_parent">
 
         <RelativeLayout
             android:id="@+id/relativeLayout1"

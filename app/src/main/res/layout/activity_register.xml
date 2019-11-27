@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.RegisterActivity">
+    android:background="@android:color/black"
+    tools:context="com.omninos.Activities.RegisterActivity">
 
-    <include layout="@layout/back_arrow"/>
+    <include layout="@layout/back_arrow" />
 
     <include
         android:id="@+id/logo"
@@ -85,18 +86,17 @@
                                         android:id="@+id/email_icon"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:paddingTop="@dimen/icon_padding_top"
                                         android:src="@drawable/user" />
 
                                     <EditText
                                         android:id="@+id/username"
-                                        android:singleLine="true"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:background="@color/white"
                                         android:hint="@string/username_hint"
-                                        android:padding="@dimen/layout_padding" />
+                                        android:padding="@dimen/layout_padding"
+                                        android:singleLine="true" />
 
                                 </LinearLayout>
 
@@ -127,18 +127,17 @@
                                         android:id="@+id/telephone_icon"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:paddingTop="@dimen/icon_padding_top"
                                         android:src="@drawable/telephone_of_old_design" />
 
                                     <EditText
-                                        android:singleLine="true"
                                         android:id="@+id/user_phone_no"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@color/white"
                                         android:hint="@string/user_phone_hint"
                                         android:inputType="numberPassword"
-                                        android:padding="@dimen/layout_padding" />
+                                        android:padding="@dimen/layout_padding"
+                                        android:singleLine="true" />
 
                                 </LinearLayout>
 
@@ -169,17 +168,16 @@
                                         android:id="@+id/message_icon"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:paddingTop="@dimen/icon_padding_top"
                                         android:src="@drawable/email" />
 
                                     <EditText
-                                        android:singleLine="true"
                                         android:id="@+id/email_address"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@color/white"
                                         android:hint="@string/email_hint"
-                                        android:padding="@dimen/layout_padding" />
+                                        android:padding="@dimen/layout_padding"
+                                        android:singleLine="true" />
 
                                 </LinearLayout>
 
@@ -210,18 +208,18 @@
                                         android:id="@+id/password_icon"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:paddingTop="@dimen/icon_padding_top"
-                                        android:src="@drawable/lock" />
+                                        android:layout_marginBottom="@dimen/card_margin_dp_2"
+                                        android:src="@drawable/password" />
 
                                     <EditText
-                                        android:singleLine="true"
                                         android:id="@+id/user_password"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@color/white"
                                         android:hint="@string/user_phone_hint"
                                         android:inputType="numberPassword"
-                                        android:padding="@dimen/layout_padding" />
+                                        android:padding="@dimen/layout_padding"
+                                        android:singleLine="true" />
 
                                 </LinearLayout>
 
@@ -252,18 +250,18 @@
                                         android:id="@+id/password_icon1"
                                         android:layout_width="30dp"
                                         android:layout_height="30dp"
-                                        android:paddingTop="@dimen/icon_padding_top"
-                                        android:src="@drawable/lock" />
+                                        android:layout_marginBottom="@dimen/card_margin_dp_2"
+                                        android:src="@drawable/password" />
 
                                     <EditText
-                                        android:singleLine="true"
                                         android:id="@+id/user_conform_password"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:background="@color/white"
                                         android:hint="@string/user_phone_hint"
                                         android:inputType="numberPassword"
-                                        android:padding="@dimen/layout_padding" />
+                                        android:padding="@dimen/layout_padding"
+                                        android:singleLine="true" />
 
                                 </LinearLayout>
 
@@ -299,13 +297,15 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/signup_login_hint" />
+                    android:text="@string/signup_login_hint"
+                    android:textColor="@android:color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
                     android:text="@string/login"
-                    android:textColor="@color/lightblue" />
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 

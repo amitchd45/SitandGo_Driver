@@ -4,25 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.SelectVehicleTypeActivity">
+    tools:context="com.omninos.Activities.SelectVehicleTypeActivity">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/top_toolbar" />
 
-    <include
-        android:id="@+id/logo"
-        layout="@layout/app_logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:layout_marginTop="@dimen/dp_10" />
-
     <RelativeLayout
+        android:layout_marginTop="@dimen/dp_30"
         android:id="@+id/relativeLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo">
+        android:layout_below="@id/toolbar">
 
         <TextView
             android:layout_width="wrap_content"

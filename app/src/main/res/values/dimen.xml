@@ -3,7 +3,7 @@
 
         <dimen name="headerTextSize">22sp</dimen>
         <dimen name="newsMoreTextSize">12sp</dimen>
-        <dimen name="cardCornerRadius">15dp</dimen>
+        <dimen name="cardCornerRadius">12dp</dimen>
         <dimen name="cardCornerRadiusOfEditText">8dp</dimen>
         <dimen name="cardElevation">10dp</dimen>
 

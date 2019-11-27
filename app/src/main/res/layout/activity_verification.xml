@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.VerificationActivity">
+    android:background="@android:color/black"
+    tools:context="com.omninos.Activities.VerificationActivity">
 
     <include layout="@layout/back_arrow" />
 
@@ -101,14 +102,16 @@
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp">
 
                                 <LinearLayout
+                                    android:id="@+id/linearLayout"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="30dp"
-                                    android:gravity="center_horizontal">
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
 
                                     <EditText
                                         android:id="@+id/otp1"
@@ -160,13 +163,23 @@
 
                                 </LinearLayout>
 
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:text="@string/resend_otp"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
                             </RelativeLayout>
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="50dp"
-                                android:layout_marginBottom="30dp">
+                                android:layout_marginTop="@dimen/dp_30"
+                                android:layout_marginBottom="@dimen/dp_20">
 
                                 <Button
                                     android:id="@+id/varification_submit_btn"

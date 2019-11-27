@@ -4,174 +4,235 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.Activities.MyProfileActivity">
-
+    tools:context="com.omninos.Activities.ProfileActivity">
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/top_toolbar"/>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RelativeLayout
-                android:id="@+id/layoutPicture"
-                android:layout_width="190dp"
-                android:layout_height="190dp"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true">
-
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_pic"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/profile_image"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="2dp" />
-
-                <ImageView
-                    android:background="@drawable/circle_white"
-                    android:id="@+id/pick_image1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_add_circle" />
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-
-    </RelativeLayout>
+        layout="@layout/top_toolbar" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/relativeLayout5">
+        android:layout_below="@id/toolbar">
 
         <RelativeLayout
-            android:layout_marginTop="@dimen/dp_20"
-            android:id="@+id/relativeLayout6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/relativeLayout5">
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/profile_image"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Amandeep.infosif"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/ic_location_pin_1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="Melbourne Australia"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_15"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tv_email_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email:" />
+
+                    <TextView
+                        android:id="@+id/tv_email_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_toRightOf="@id/tv_email_name"
+                        android:text="smith14@gmail.com" />
+
+                    <TextView
+                        android:id="@+id/dob_name"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/dob_value"
+                        android:text="D.O.B:" />
+
+                    <TextView
+                        android:id="@+id/dob_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:text="June 15,1994" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tv_mobile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile:" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_toRightOf="@id/tv_mobile_name"
+                        android:text="+1-88888-99999" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address:" />
+
+                    <TextView
+                        android:id="@+id/tv_address_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_toRightOf="@id/tv_address"
+                        android:text="@string/address_value" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:background="@color/lightGray" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="40dp"
+                android:layout_below="@id/linearLayout2"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_15"
                 android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:text="Earnings"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/card_margin_dp_2"
-                    app:cardCornerRadius="@dimen/editTextRedius">
+                    android:padding="@dimen/dp_5">
 
-                    <EditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:hint="Full Name"
-                        android:padding="12dp"
-                        android:singleLine="true" />
+                        android:text="Total Earnings" />
 
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/card_margin_dp_2"
-                    android:layout_marginTop="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/card_margin_dp_2"
-                    app:cardCornerRadius="@dimen/editTextRedius">
-
-                    <EditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:hint="Email"
-                        android:padding="12dp"
-                        android:singleLine="true" />
+                        android:layout_alignParentRight="true"
+                        android:text="$351000" />
 
-                </androidx.cardview.widget.CardView>
+                </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/card_margin_dp_2"
-                    android:layout_marginTop="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/card_margin_dp_2"
-                    app:cardCornerRadius="@dimen/editTextRedius">
+                    android:padding="@dimen/dp_5">
 
-                    <EditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:hint="Date Of Birth"
-                        android:padding="12dp"
-                        android:singleLine="true" />
+                        android:text="Total Trips" />
 
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/card_margin_dp_2"
-                    android:layout_marginTop="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/card_margin_dp_2"
-                    app:cardCornerRadius="@dimen/editTextRedius">
-
-                    <EditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:hint="Mobile Number"
-                        android:padding="12dp"
-                        android:singleLine="true" />
+                        android:layout_alignParentRight="true"
+                        android:text="528" />
 
-                </androidx.cardview.widget.CardView>
+                </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/card_margin_dp_2"
-                    android:layout_marginTop="@dimen/dp_20"
-                    android:layout_marginRight="@dimen/card_margin_dp_2"
-                    app:cardCornerRadius="@dimen/editTextRedius">
+                    android:padding="@dimen/dp_5">
 
-                    <EditText
-                        android:layout_width="match_parent"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@color/white"
-                        android:hint="Address"
-                        android:padding="12dp"
-                        android:singleLine="true" />
+                        android:text="Total Balance" />
 
-                </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="$250" />
 
-                <Button
-                    android:id="@+id/btn_continue_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:background="@drawable/gradient_button1"
-                    android:text="@string/save_btn"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white" />
+                </RelativeLayout>
+
 
             </LinearLayout>
+
 
         </RelativeLayout>
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ConnekMa_Driver</string>
+    <string name="app_name">SitnGo</string>
 
     <string name="login_header_name">login</string>
 
@@ -8,7 +8,7 @@
     <string name="username_or_email_hint">info@ominous.com</string>
     <string name="user_password">Password</string>
     <string name="forget_password">Forget Password ?</string>
-    <string name="password_hint">***********************</string>
+    <string name="password_hint">******************</string>
     <string name="login_button">Login</string>
 
     <string name="register"><u>Register</u>.</string>
@@ -28,7 +28,7 @@
     <string name="register_button">Register</string>
 
     <string name="signup_login_hint">You have an account? </string>
-    <string name="login"><u>Login</u>.</string>
+    <string name="login"><u> Login</u>.</string>
 
     //---------------verification------------------
 
@@ -103,5 +103,7 @@
     <string name="driving_licence_no">Driving License Number</string>
     <string name="validate_vehicle">Valid Vehicle Type</string>
     <string name="issue">Issued On</string>
+    <string name="address_value">Street No 45 near STV tower Melbourne</string>
+    <string name="resend_otp"><u>Resend otp</u></string>
 
 </resources>
