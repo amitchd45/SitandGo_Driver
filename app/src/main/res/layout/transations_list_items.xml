@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_4"
+    android:layout_marginLeft="@dimen/card_margin_dp_2"
+    android:layout_marginRight="@dimen/card_margin_dp_2"
+    android:layout_marginTop="@dimen/card_margin_dp_2"
+    android:layout_marginBottom="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_15"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steve Smith"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dp_15"/>
+
+        <TextView
+            android:id="@+id/tv_amounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$35"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dp_15"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"/>
+
+        <TextView
+            android:id="@+id/tv_from_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/tv_from"
+            android:text="Melbourne Airport" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"/>
+
+        <TextView
+            android:id="@+id/tv_To_location"
+            android:layout_toRightOf="@id/tv_to"
+            android:layout_marginLeft="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Melbourne Cricket Stadium"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="July 25, 04:50 p.m"/>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
